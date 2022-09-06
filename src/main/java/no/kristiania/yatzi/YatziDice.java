@@ -12,7 +12,7 @@ public class YatziDice {
             int result = 0;
             for (int die : dice) {
                 if (die == 1) {
-                    result += 1;
+                    result += die;
                 }
             }
             return result;
