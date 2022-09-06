@@ -23,9 +23,13 @@ public class YatziTest {
 
     @Test
     void shouldScoreOnes() {
-        var dice = new YatziDice(new int[] {
-                1, 1, 2, 6, 4
-        });
+        var dice = new YatziDice(new int[] {1, 1, 2, 6, 4});
         assertEquals(2, dice.scoreAs(YatziCategory.ONES));
+    }
+
+    @Test
+    void shouldScorePerfectOnes() {
+        var dice = new YatziDice(new int[] {1, 1, 1, 1, 1});
+        assertEquals(5, dice.scoreAs(YatziCategory.ONES));
     }
 }
