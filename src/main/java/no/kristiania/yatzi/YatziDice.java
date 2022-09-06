@@ -9,17 +9,24 @@ public class YatziDice {
 
     public int scoreAs(YatziCategory category) {
         if (category == YatziCategory.ONES) {
-            int result = 0;
-            for (int die : dice) {
-                if (die == 1) {
-                    result += die;
-                }
-            }
-            return result;
+            return scoreEqualDie(1);
+        }
+        if (category == YatziCategory.TWOS) {
+            return scoreEqualDie(2);
         }
         int result = 0;
         for (int die : dice) {
             result += die;
+        }
+        return result;
+    }
+
+    private int scoreEqualDie(int targetDie) {
+        int result = 0;
+        for (int die : dice) {
+            if (die == targetDie) {
+                result += die;
+            }
         }
         return result;
     }
