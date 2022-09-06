@@ -13,4 +13,11 @@ public class YatziTest {
         });
         assertEquals(2+2+3+5+6, dice.scoreAs(YatziCategory.CHANCE));
     }
+    @Test
+    void shouldScorePerfectChance() {
+        YatziDice dice = new YatziDice(new int[] {
+                6, 6, 6, 6, 6
+        });
+        assertEquals(5*6, dice.scoreAs(YatziCategory.CHANCE));
+    }
 }
