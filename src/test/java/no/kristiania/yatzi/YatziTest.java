@@ -8,16 +8,24 @@ public class YatziTest {
 
     @Test
     void shouldScoreChance() {
-        YatziDice dice = new YatziDice(new int[] {
+        var dice = new YatziDice(new int[] {
                 2, 2, 3, 5, 6
         });
         assertEquals(2+2+3+5+6, dice.scoreAs(YatziCategory.CHANCE));
     }
     @Test
     void shouldScorePerfectChance() {
-        YatziDice dice = new YatziDice(new int[] {
+        var dice = new YatziDice(new int[] {
                 6, 6, 6, 6, 6
         });
         assertEquals(5*6, dice.scoreAs(YatziCategory.CHANCE));
+    }
+
+    @Test
+    void shouldScoreOnes() {
+        var dice = new YatziDice(new int[] {
+                1, 1, 2, 6, 4
+        });
+        assertEquals(2, dice.scoreAs(YatziCategory.ONES));
     }
 }
