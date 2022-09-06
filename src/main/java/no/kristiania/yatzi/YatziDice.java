@@ -11,17 +11,17 @@ public class YatziDice {
     }
 
     public int scoreAs(YatziCategory category) {
-        Map<Integer, Integer> temp = new HashMap<>();
+        Map<Integer, Integer> dieFrequency = new HashMap<>();
         for (int die : dice) {
-            if (!temp.containsKey(die)) {
-                temp.put(die, 0);
+            if (!dieFrequency.containsKey(die)) {
+                dieFrequency.put(die, 0);
             }
-            temp.put(die, temp.get(die) + 1);
+            dieFrequency.put(die, dieFrequency.get(die) + 1);
         }
 
         if (category == YatziCategory.PAIR) {
-            for (Integer dieValue : temp.keySet()) {
-                if (temp.get(dieValue) >= 2) {
+            for (Integer dieValue : dieFrequency.keySet()) {
+                if (dieFrequency.get(dieValue) >= 2) {
                     return dieValue * 2;
                 }
             }
