@@ -1,5 +1,5 @@
 package no.kristiania.yatzi;
 
 public enum YatziCategory {
-    ONES, CHANCE
+    ONES, TWOS, CHANCE
 }

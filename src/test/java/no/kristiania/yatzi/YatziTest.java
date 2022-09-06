@@ -32,4 +32,10 @@ public class YatziTest {
         var dice = new YatziDice(new int[] {1, 1, 1, 1, 1});
         assertEquals(5, dice.scoreAs(YatziCategory.ONES));
     }
+
+    @Test
+    void shouldScoreTwos() {
+        var dice = new YatziDice(new int[] {1, 2, 1, 2, 1});
+        assertEquals(4, dice.scoreAs(YatziCategory.TWOS));
+    }
 }
