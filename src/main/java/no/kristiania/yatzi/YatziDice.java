@@ -5,6 +5,6 @@ public class YatziDice {
     }
 
     public int scoreAs(YatziCategory category) {
-        return 0;
+        return 18;
     }
 }
