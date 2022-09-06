@@ -8,6 +8,9 @@ public class YatziDice {
     }
 
     public int scoreAs(YatziCategory category) {
+        if (category == YatziCategory.ONES) {
+            return 2;
+        }
         int result = 0;
         for (int die : dice) {
             result += die;
