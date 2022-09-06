@@ -38,4 +38,12 @@ public class YatziTest {
         var dice = new YatziDice(new int[] {1, 2, 1, 2, 1});
         assertEquals(4, dice.scoreAs(YatziCategory.TWOS));
     }
+
+    @Test
+    void shouldScorePairs() {
+        assertEquals(4,
+                new YatziDice(new int[] {1, 2, 5, 2, 3}).scoreAs(YatziCategory.PAIR));
+        assertEquals(12,
+                new YatziDice(new int[] {1, 2, 6, 6, 3}).scoreAs(YatziCategory.PAIR));
+    }
 }
