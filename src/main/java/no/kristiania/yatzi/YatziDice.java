@@ -28,10 +28,10 @@ public class YatziDice {
         }
 
         if (category == YatziCategory.ONES) {
-            return scoreEqualDie(1);
+            return dieFrequency.get(1);
         }
         if (category == YatziCategory.TWOS) {
-            return scoreEqualDie(2);
+            return dieFrequency.get(2) * 2;
         }
         int result = 0;
         for (int die : dice) {
@@ -40,13 +40,4 @@ public class YatziDice {
         return result;
     }
 
-    private int scoreEqualDie(int targetDie) {
-        int result = 0;
-        for (int die : dice) {
-            if (die == targetDie) {
-                result += die;
-            }
-        }
-        return result;
-    }
 }
